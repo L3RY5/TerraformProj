@@ -47,3 +47,33 @@ resource "aws_instance" "instance-RHEL" {
 
 }
 
+
+#Using fopr each
+data "aws_ami" "app_forEach" {
+  most_recent = true
+  owners      = ["Windows"]
+
+
+  filter {
+    name   = "name"
+    values = [var.imageName["RHEL9"]] ## AMazon image
+  }
+}
+
+resource "aws_instance" "instance-RHEL" {
+  ami               = data.aws_ami.forEach.id
+  for_each = {
+    keyMicro = "t2.micro"
+    keymedium = "t2.medium"
+  }
+  instance_type     = each.value
+  key_name          = each.key
+  availability_zone = var.EC2availability_ZoneMap["1c"] ## eu-central-1b 
+  count             = length(var.ec2_Name_LIST)
+  tags = {
+    Name = each.key
+  }
+
+
+}
+
