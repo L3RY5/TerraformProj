@@ -66,5 +66,13 @@
     ==> terraform force-unlock : manually unlock the state file if unlocking failed.
 >
 
+#####  Terraform state Commmand
+    ==> Terraform state list : List resources within the terraform state file 
+    ==> terraform state mv : moves item with terraform state
+    ==> terraform  state pull : manually download and output  the state from the remote state file
+    ==> terraform state push : manually upload a local state  file to remote state
+    ==> terraform state rm : Remove items from the terraform state
+    ==> terraform state show : show the attributes of a single resource in the state 
+
 
 
