@@ -68,11 +68,42 @@
 
 #####  Terraform state Commmand
     ==> Terraform state list : List resources within the terraform state file 
+>
     ==> terraform state mv : moves item with terraform state
+    ###
+    Can be used to rename an existing resource without destroying and recreating it. 
+    beacauise ofn the destructivee nature of this command it will output a backup of the statefile
+
+    SINTAX : terraform state mv [options] SOURCE DESTINATION ==> terraform state mv aws_instance.localName aws_instance.NewLocalname
+    ###
+
+>
     ==> terraform  state pull : manually download and output  the state from the remote state file
-    ==> terraform state push : manually upload a local state  file to remote state
+    ###
+    SINTAX : terraforpm  state pull -->
+    ###
+
+>
+    ==> terraform state push : manually upload a local state  file to remote state  
+    ###
+    This should rearly be used
+    terraform state push
+    ###
+>
     ==> terraform state rm : Remove items from the terraform state
-    ==> terraform state show : show the attributes of a single resource in the state 
+    ###
+    the resources are not destroyed but are just not controlled or no longer managed by terraform.
+    the instnace is removed from the statefile, but it is still running on AWzs etc
+    ###
+
+>
+    ==> terraform state show : show the attributes of a single resource in the state
+    ###
+    show all the attributes off a single resource in the terraform state
+    SYNTAX : terraform state show aws_instance.localName
+    ### 
+
+>
 
 
 
