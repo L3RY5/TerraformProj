@@ -104,6 +104,12 @@
     ### 
 
 >
+>
+    ==> $ terraform plan-generate-config-out=sg_Config_import.tf
+    ###
+    it will generate config file for the manully created resource for  you .
+    when run terraform aplly you will see the statefile generarted
+    ###
 
 
 
