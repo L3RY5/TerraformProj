@@ -15,6 +15,3 @@ provider "aws" {
   }
 }
 
-#credentials for srt_user
-# Secret_key = zpyhY+Fh0zj0AyEazg2lEh9qFc7NPispI0XdEVYX
-# access_Key = AKIAVCUPW6N5IIK4M24W
