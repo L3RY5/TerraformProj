@@ -111,5 +111,15 @@
     when run terraform aplly you will see the statefile generarted
     ###
 
+>
+    ==> aws sts assume-role --role-arn arn:aws:iam::nr:role/RoleName role-session-name sessionName
+    ###
+    This will return createntials for that role that is in that account. So if you if you have multiple accounts.
+    * create a sts role per account
+    * give teh role a permisions to create and display or cxhange thing on that accoubt
+    * on thge securoty tab of that role, add secret key
+    ###
 
+
+aws sts assume-role --role-arn arn:aws:iam::349267489658:role/Role_sts_TF_TestGroundAcc role-session-name sessionName
 
